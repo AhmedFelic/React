@@ -13,9 +13,11 @@ function Movies() {
     const [movies, setMovies] = useState([]);
     const [modal, setmodal] = useState(false);
     const [searchTitle, setSearchTitle] = useState("")
-    
-    const toggleModal = () => {
+    const [singleMovie, setSingleMovie] = useState(null)
+
+    const toggleModal = (singleMovie) => {
         setmodal(!modal)
+        setSingleMovie(singleMovie)
     }
 
     const fetchMovies = () => {
@@ -60,7 +62,7 @@ function Movies() {
                         <div className="movie-card-container"  >
                             <p>{movie.title} </p>
                             <img className="poster-image" src={API_IMG + movie.poster_path} ></img>
-                            <button onClick={toggleModal} className="info-button">Info</button>
+                            <button onClick={() => toggleModal(movie)} className="info-button">Info</button>
                         </div>
                     ))}
                      
@@ -70,13 +72,13 @@ function Movies() {
            
             {modal && (
                 <div className="modal">
-                    <div onClick={toggleModal} className="overlay">
-                        {movies.map((movie) => (
+                    <div onClick={toggleModal}  className="overlay">
+                       
                             <div className="modal-content">
-                                 <p>{movie.title}</p>
-                               
+                                 <p>{singleMovie.title}</p>
+                                
                                 <button onClick={toggleModal}>Close</button>
-                            </div>))}
+                            </div>
                     </div>
                 </div>
             )}

@@ -18,11 +18,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Series/>,
+    element: <Movies/>,
   },
   {
-    path: "movies",
-    element: <Movies/>,
+    path: "series",
+    element: <Series/>,
   },
 
 ]);

@@ -63,6 +63,7 @@ function Movies() {
                             <p>{movie.title} </p>
                             <img className="poster-image" src={API_IMG + movie.poster_path} ></img>
                             <button onClick={() => toggleModal(movie)} className="info-button">Info</button>
+                            <span className="movie-grade"> {movie.vote_average}</span>
                         </div>
                     ))}
                      
@@ -75,8 +76,9 @@ function Movies() {
                     <div onClick={toggleModal}  className="overlay">
                        
                             <div className="modal-content">
-                                 <p>{singleMovie.title}</p>
-                                
+                                 <p className="modal-title">{singleMovie.title}</p>
+                                 <img className="poster-image" src={API_IMG + singleMovie.poster_path} ></img>
+                                <p >{singleMovie.overview}</p>
                                 <button onClick={toggleModal}>Close</button>
                             </div>
                     </div>

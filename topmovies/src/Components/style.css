@@ -65,6 +65,9 @@ color: black;
     text-align: center;
   
   }
+  .series-overview{
+    padding: 16px 0px 16px 0px;
+  }
   .overview{
     margin-left: 1rem;
     width: 50px;
@@ -77,10 +80,24 @@ color: black;
     background-color: white;
     cursor: pointer;
   }
+  .info-button{
+    margin-left: 10px;
+  }
   .poster-image{
     margin-top: 15px;
     width: 400px;
     height: 400px;
+  }
+  .movie-grade{
+    margin-left: 330px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 3px;
+    display: flex;
+    width: 20px;
+    margin-top: -23px;
+    
+
   }
   /*modal*/
   body.active-modal {
@@ -109,16 +126,41 @@ color: black;
 }
 .modal-content {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
     background: #f1f1f1;
     padding: 14px 28px;
     border-radius: 3px;
-    max-width: 600px;
-    min-width: 300px;
+    max-width: 500px;
+    min-width: 200px;
+   
 }
+.modal-content p{
+  text-align: justify;
+}
+.modal-title{
+  text-align: center!important;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+.modal-title-series{
+  text-align: center!important;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 0;
+  padding-bottom: 15px;
+}
+.modal-series{
+  line-height: 1.3;
+}
+.modal-content img{
+  display: flex;
+  margin: auto;
+  }
 
 .close-modal {
     position: absolute;

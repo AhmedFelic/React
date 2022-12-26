@@ -5,8 +5,8 @@ function Navbar() {
     return (
         <div className="container-nav">
             <ul className="nav">
-                <li><Link  className="link" to="/movies">Movies</Link></li>
-                <li> <Link  className="link link-series"  to="/">Series</Link> </li>
+                <li><Link  className="link" to="/">Movies</Link></li>
+                <li> <Link  className="link link-series"  to="/Series">Series</Link> </li>
             </ul>
 
         </div>

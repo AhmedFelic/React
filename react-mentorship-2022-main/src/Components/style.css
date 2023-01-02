@@ -1,0 +1,16 @@
+nav .navbar-button {
+  color: #fcfcfc;
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  font-weight: 600;
+}
+
+.logo {
+  margin-top: 2px;
+}

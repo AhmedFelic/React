@@ -1,0 +1,86 @@
+.form-select{
+    margin-top: 2%;
+    margin-left: 3%;
+    height: 2.5em;
+   background-color: #eaeaea;
+   color: rgb(0, 0, 0);
+   font-size: 16px;
+   letter-spacing: 1.5px;
+   font-weight: 500;
+    min-width: 11%;
+    border: 1px solid rgb(189, 189, 189); 
+}
+
+.main-row{
+    background-color: #EEEEEE;
+}
+
+.pagination-main{
+    margin-right: 55px;
+    margin-bottom: 10px
+}
+
+.form-box {
+    width: 12em;
+}
+
+.form-select {
+    width: inherit;
+    left: 20px;
+    top: -10px;
+}
+
+.table-container {
+    margin-Top: 2%;
+    border-Radius: 5px 5px 0 0;
+    margin-bottom: 3%;
+}
+
+.table-container table {
+    width: 90%;
+    margin: auto;
+}
+
+.table-cell {
+    width: 1em;
+    text-align-last: center;
+    background-color: #DFE1E2;
+}
+
+.tableCell_G {
+    width: 2.600em;
+    text-align-last: center;
+}
+
+.tableCell_A {
+    width: 2.600em;
+    text-align-last: center;
+}
+
+.position-numbers {
+    width: 1em;
+    text-align-last: center;
+}
+
+.rowBox {
+    display: flex;
+    align-Items: center;
+}
+
+.image-list {
+    width: 3.7em;
+    display: inline-block;
+    margin-Right: 15px;
+}
+
+.goal-number {
+    text-align-last: center;
+}
+
+.goal-number span {
+    font-weight: 550;
+}
+
+.assist-number {
+    text-align-last: center;
+}

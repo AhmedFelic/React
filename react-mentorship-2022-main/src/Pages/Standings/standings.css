@@ -1,0 +1,42 @@
+@font-face {
+  font-family: RobotoRegular;
+  src: url(../../assets/fonts/Roboto-Regular.ttf);
+}
+
+.standings-container {
+  padding: 3% 8%;
+  text-align: center;
+  font-family: RobotoRegular, sans-serif;
+}
+
+.tie-breaker-rules {
+  font-size: 1vw;
+  opacity: 70%;
+  text-align: start;
+}
+
+.standingsHeader {
+  padding: 1%;
+  font-size: 2vw;
+  letter-spacing: 2;
+  font-weight: 500;
+}
+
+.table-head {
+  background-color: #d8dee1;
+}
+
+table .promotion-color {
+  background-color: #637486;
+  color: #fcfcfc;
+}
+
+table .mid-table-color {
+  background-color: #82bfd1;
+  color: #fcfcfc;
+}
+
+table .relegation-color {
+  background-color: #ef5350;
+  color: #fcfcfc;
+}

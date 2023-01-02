@@ -1,0 +1,1 @@
+To run the project clone the repository, in cmd run npm i, and after everything is finished installing (if there are any libraries that need to be installed) run npm start and it will open the web app in your default browser.

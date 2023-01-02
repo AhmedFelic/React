@@ -32,7 +32,7 @@ function Movies() {
     }
     useEffect(() => {
         fetchMovies()
-        
+
     }, []);
 
 
@@ -41,46 +41,46 @@ function Movies() {
             <Navbar />
             <div className="container-movies">
                 <div className="search">
-                    <p>Search Movies</p>
-                    <input className="movie-input" onChange={(e) => setSearchTitle(e.target.value)}></input>
+                    <p className="search-title">Search Movies</p>
+                    <input className="movie-input" placeholder="Enter your keywords..." onChange={(e) => setSearchTitle(e.target.value)}></input>
                 </div>
                 <div className="all-card-container">
 
                     {
-                    movies.filter((value) =>{
-                        if(searchTitle === ""){
-                            return value
-                        }else if(
-                                value.title.toLowerCase().includes(searchTitle.toLowerCase()))
-                                { 
-                                    return value;
-                                }
-                    })
-                        
-                    .map((movie) => (
+                        movies.filter((value) => {
+                            if (searchTitle === "") {
+                                return value
+                            } else if (
+                                value.title.toLowerCase().includes(searchTitle.toLowerCase())) {
+                                return value;
+                            }
+                        })
 
-                        <div className="movie-card-container"  >
-                            <p>{movie.title} </p>
-                            <img className="poster-image" src={API_IMG + movie.poster_path} ></img>
-                            <button onClick={() => toggleModal(movie)} className="info-button">Info</button>
-                            <span className="movie-grade"> {movie.vote_average}</span>
-                        </div>
-                    ))}
-                     
+                            .map((movie) => (
+                                <a title={movie.title} onClick={() => toggleModal(movie)} className="info-button">
+                                    <div className="movie-card-container"  >
+                                        <p > <span class="head-line" > {movie.title} </span> </p>
+                                        <img className="poster-image" src={API_IMG + movie.poster_path} ></img>
+
+                                        <span className="movie-grade"> {movie.vote_average}</span>
+                                        <span className="movie-date"> {movie.release_date}</span>
+                                    </div></a>
+                            ))}
+
                 </div>
 
             </div>
-           
+
             {modal && (
                 <div className="modal">
-                    <div onClick={toggleModal}  className="overlay">
-                       
-                            <div className="modal-content">
-                                 <p className="modal-title">{singleMovie.title}</p>
-                                 <img className="poster-image" src={API_IMG + singleMovie.poster_path} ></img>
-                                <p >{singleMovie.overview}</p>
-                                <button onClick={toggleModal}>Close</button>
-                            </div>
+                    <div onClick={toggleModal} className="overlay">
+
+                        <div className="modal-content">
+                            <p className="modal-title">{singleMovie.title}</p>
+                            <img className="poster-image" src={API_IMG + singleMovie.poster_path} ></img>
+                            <p >{singleMovie.overview}</p>
+                            <button onClick={toggleModal}>Close</button>
+                        </div>
                     </div>
                 </div>
             )}

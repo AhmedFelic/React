@@ -45,8 +45,8 @@ function Series() {
 
             <div className="container-series">
                 <div className="search">
-                    <p>Search Series</p>
-                    <input className="movie-input" onChange={(e) => setSearchTitle(e.target.value)}></input>
+                    <p className="search-title">Search Series</p>
+                    <input className="movie-input" placeholder="Enter your keywords..." onChange={(e) => setSearchTitle(e.target.value)}></input>
                 </div>
 
 
@@ -63,14 +63,15 @@ function Series() {
                                 }
                     })
                          .map((serie) => (
-
+                            <a title={serie.name} onClick={() => toggleModal(serie)} className="info-button">
                         <div className="movie-card-container"  >
-                            <p>{serie.name}</p>
+                            <p> <span class="head-line" >{serie.name} </span></p>
                             <img className="poster-image" src={API_IMG + serie.poster_path}></img>
                             
-                            <button onClick={() => toggleModal(serie)} className="info-button">Info</button>
+                          
                             <span className="movie-grade"> {serie.vote_average}</span>
-                        </div>
+                            <span className="movie-date"> {serie.first_air_date}</span>
+                        </div></a>
                     ))}
                 </div>
                 {modal && (

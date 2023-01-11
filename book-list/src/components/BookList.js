@@ -1,8 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import { ReactDOM } from "react"
 import Nav from "./Nav"
+import { useEffect } from "react"
 
 function BookList() {
+//AIzaSyDJpWPOk-cDe3qjK3Ksnn9TFlUm1vIh9wc
+    const [bookData, setBookData] = useState()
+    const [search, setSearch] = useState()
+    const getData = async () =>{
+        const response = await fetch(
+            "https://example-data.draftbit.com/books?_limit=50"
+        ).then((response) => response.json())
+        .catch(err =>console.log(err))
+        setBookData(response)
+        console.log(response)
+    }
+
+
+useEffect(()=>{
+  getData()
+},[]);
+
+
+
+
+
     return (
         <>
             <Nav />

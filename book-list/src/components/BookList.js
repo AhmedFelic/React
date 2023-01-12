@@ -5,11 +5,11 @@ import { useEffect } from "react"
 
 function BookList() {
 //AIzaSyDJpWPOk-cDe3qjK3Ksnn9TFlUm1vIh9wc
-    const [bookData, setBookData] = useState()
+    const [bookData, setBookData] = useState([])
     const [search, setSearch] = useState()
     const getData = async () =>{
         const response = await fetch(
-            "https://example-data.draftbit.com/books?_limit=50"
+            "https://example-data.draftbit.com/books?_limit=30"
         ).then((response) => response.json())
         .catch(err =>console.log(err))
         setBookData(response)
@@ -29,13 +29,15 @@ useEffect(()=>{
         <>
             <Nav />
             <div className="books-main">
-                <div className="books-container">
-                    <img className="book-image" src="#"></img>
-                    <p className="book-title">Title: </p>
-                    <p className="book-rating">Rating</p>
+             {
+             bookData.map((book) =>(
+                    <div className="books-container">
+                    <img className="book-image" src={book.image_url}></img>
+                    <p className="book-title">{book.title}  </p>
+                    <p className="book-rating">Rating: {book.rating}</p>
                     <a className="book-info" href="">Info</a>
                 </div>
-                
+                ))}  
             </div>
 
         </>

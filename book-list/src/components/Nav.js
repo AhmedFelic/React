@@ -4,7 +4,7 @@ import "../index.css"
 function Nav (){
     return(
         <>
-        <h2 className="nav-title">This is a website which displays Books pulled from Google Books API</h2>
+        <h2 className="nav-title">This is a website which displays books pulled from draftbit book data API</h2>
         
         </>
     )

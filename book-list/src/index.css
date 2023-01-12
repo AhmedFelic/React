@@ -3,7 +3,7 @@
     margin-bottom: 35px;
 }
 .books-main{
-    border: 1px solid black;
+  
     width: 85%;
     margin: auto;
     height: 100%;
@@ -12,7 +12,8 @@
 .books-container{
     border: 1px solid black;
     margin-bottom: 30px;
-    
+    position: relative;
+    display: flex;
 }
 .books-container p, .books-container a{
     display: inline-block;
@@ -24,16 +25,18 @@
     margin-right: 50px;
 }
 .book-info{
-    right: 180px;
-    top: 105px;
+    right: 100px;
+    top: 20px;
     position: absolute;
 }
 .book-rating{
-    right: 320px;
-    top: 84px;
     position: absolute;
+    right: 230px;
+    
 }
 .book-image{
     margin-left: 10px;
-    
+   width: 90px;
+   height: 80px;
+   margin-top: 5px;
 }

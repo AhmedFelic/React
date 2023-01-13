@@ -3,23 +3,28 @@ import { ReactDOM } from "react"
 import Nav from "./Nav"
 import { useEffect } from "react"
 
+import { useNavigate } from "react-router-dom"
+
 function BookList() {
-//AIzaSyDJpWPOk-cDe3qjK3Ksnn9TFlUm1vIh9wc
+
     const [bookData, setBookData] = useState([])
-    const [search, setSearch] = useState()
-    const getData = async () =>{
+
+
+    const navigate = useNavigate();
+
+    const getData = async () => {
         const response = await fetch(
             "https://example-data.draftbit.com/books?_limit=30"
         ).then((response) => response.json())
-        .catch(err =>console.log(err))
+            .catch(err => console.log(err))
         setBookData(response)
         console.log(response)
     }
 
 
-useEffect(()=>{
-  getData()
-},[]);
+    useEffect(() => {
+        getData()
+    }, []);
 
 
 
@@ -29,15 +34,16 @@ useEffect(()=>{
         <>
             <Nav />
             <div className="books-main">
-             {
-             bookData.map((book) =>(
-                    <div className="books-container">
-                    <img className="book-image" src={book.image_url}></img>
-                    <p className="book-title">{book.title}  </p>
-                    <p className="book-rating">Rating: {book.rating}</p>
-                    <a className="book-info" href="">Info</a>
-                </div>
-                ))}  
+                {
+                    bookData.map((book) => (
+                        <div className="books-container" key={book.id}>
+                            <img className="book-image" src={book.image_url}></img>
+                            <p className="book-title">{book.title}  </p>
+                            <p className="book-rating">Rating: {book.rating}</p>
+                            <p className="book-info" onClick ={()=>navigate(`/info/${book.id}`)}>Info</p>
+
+                        </div>
+                    ))}
             </div>
 
         </>

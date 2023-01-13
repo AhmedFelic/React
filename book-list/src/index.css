@@ -2,11 +2,15 @@
     text-align: center;
     margin-bottom: 35px;
 }
-.books-main{
-  
+html{
+    
     width: 85%;
     margin: auto;
     height: 100%;
+   
+}
+.books-main{
+  
     font-size: 22px;
 }
 .books-container{
@@ -25,13 +29,14 @@
     margin-right: 50px;
 }
 .book-info{
-    right: 100px;
-    top: 20px;
+    right: 90px;
+    cursor: pointer;
+    color: rgb(84, 121, 199);
     position: absolute;
 }
 .book-rating{
     position: absolute;
-    right: 230px;
+    right: 220px;
     
 }
 .book-image{
@@ -39,4 +44,33 @@
    width: 90px;
    height: 80px;
    margin-top: 5px;
+  
+}
+.info-container{
+    font-size: 24px;
+}
+
+.info-content-image{
+    height: 400px;
+    width: 270px;
+    float: left;
+    position: absolute;
+}
+
+.margin{
+    margin-left: 300px;
+    position: relative;
+    top: 50px;
+}
+.info-book-about{
+    text-align: justify;
+    margin-top: 150px;
+    position: absolute;
+    margin-left: 0px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+.names{
+    font-weight: bold;
+
 }

@@ -26,9 +26,7 @@ function BookList() {
         getData()
     }, []);
 
-
-
-
+	
 
     return (
         <>
@@ -37,8 +35,11 @@ function BookList() {
                 {
                     bookData.map((book) => (
                         <div className="books-container" key={book.id}>
-                            <img className="book-image" src={book.image_url}></img>
-                            <p className="book-title">{book.title}  </p>
+                          
+                       <img  className="book-image" src={book.image_url}></img>
+                         
+                            <p className="book-title" title={book.title}>{book.title}  </p>
+                            <p className="book-author">{book.authors}</p>
                             <p className="book-rating">Rating: {book.rating}</p>
                             <p className="book-info" onClick ={()=>navigate(`/info/${book.id}`)}>Info</p>
 

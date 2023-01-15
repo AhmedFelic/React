@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 function BookList() {
 
     const [bookData, setBookData] = useState([])
-
+    const [searchTitle, setSearchTitle] = useState("")
 
     const navigate = useNavigate();
 
@@ -26,25 +26,37 @@ function BookList() {
         getData()
     }, []);
 
-	
+
 
     return (
         <>
             <Nav />
             <div className="books-main">
+                <span className="book-input-parent">
+                <input className="book-input" placeholder="Enter book name... " onChange={(e) => setSearchTitle(e.target.value)}></input>
+                </span>
                 {
-                    bookData.map((book) => (
-                        <div className="books-container" key={book.id}>
-                          
-                       <img  className="book-image" src={book.image_url}></img>
-                         
-                            <p className="book-title" title={book.title}>{book.title}  </p>
-                            <p className="book-author">{book.authors}</p>
-                            <p className="book-rating">Rating: {book.rating}</p>
-                            <p className="book-info" onClick ={()=>navigate(`/info/${book.id}`)}>Info</p>
+                    bookData.filter((value) => {
+                        if (searchTitle === " ") {
+                            return value;
+                        } else if (
+                            value.title.toLowerCase().includes(searchTitle.toLowerCase())) {
+                            return value;
+                        }
 
-                        </div>
-                    ))}
+                    })
+                        .map((book) => (
+                            <div className="books-container" key={book.id}>
+
+                                <img className="book-image" src={book.image_url}></img>
+
+                                <p className="book-title" title={book.title}>{book.title}  </p>
+                                <p className="book-author">{book.authors}</p>
+                                <p className="book-rating">Rating: {book.rating}</p>
+                                <p className="book-info" onClick={() => navigate(`/info/${book.id}`)}>Info</p>
+
+                            </div>
+                        ))}
             </div>
 
         </>

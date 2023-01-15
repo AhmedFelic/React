@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 
+import { useNavigate } from "react-router-dom"
+
 import Nav from "./Nav"
 import { useEffect } from "react"
 import "../index.css"
@@ -25,15 +27,17 @@ useEffect(()=>{
   getData()
 },[id]);
 
-
+const navigate = useNavigate();
 
     return (
         <>
             <Nav />
 
             <div className="info-container">
-         
+            
+
                 <div className="info-content-container" >
+                <button class="button-60" role="button" onClick={() => navigate(`/`)}>Back To List</button>
                     <img className="info-content-image " src={bookData.image_url} />
                     <p className="info-book-title margin" ><span className="names">Title: </span>  {bookData.title}</p>
                     <p className="info-book-release margin"><span className="names">Author:</span> {bookData.authors} </p>

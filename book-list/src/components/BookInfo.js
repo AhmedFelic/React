@@ -32,7 +32,7 @@ const navigate = useNavigate();
     return (
         <>
             <Nav />
-
+         
             <div className="info-container">
             
 

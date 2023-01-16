@@ -15,7 +15,7 @@ html{
 }
 
 .books-main{
-  
+    
     font-size: 22px;
 }
 .books-container{
@@ -152,4 +152,30 @@ html{
   
   .button-60:focus:not(:active) {
     box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+  }
+  .pagination-buttons{
+    margin-bottom: 40px;
+    margin-left: 22.7px;
+    width: 30px;
+    background-color: white;
+    border: 1px solid rgb(116, 116, 116);
+    box-shadow: rgb(83, 82, 82) 1px 1px;
+    cursor: pointer;
+  }
+  .pagination{
+    margin-left: -20px;
+    margin-top: 25px;
+  }
+  .pagination-buttons:hover{
+    background-color: rgba(212, 212, 212, 0.3);
+  }
+  .pagination-number{
+    position: absolute;
+    top: 141px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 520px;
+    background-color: white;
+    border: 1px solid rgb(116, 116, 116);
+    box-shadow: rgb(83, 82, 82) 1px 1px;
+    
   }

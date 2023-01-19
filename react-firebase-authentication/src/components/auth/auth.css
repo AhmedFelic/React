@@ -17,6 +17,7 @@ body{
 }
 .sign-in-container{
     
+    margin-top: 150px;
     width: 350px;
     display: inline-block;
     height: 400px;
@@ -142,3 +143,66 @@ body{
     margin-left: -400px;
     font-size: 28px;
 }
+
+
+@media (max-width: 11350px) {
+   
+    .sign-in-container{
+    
+        margin-left: -70px;
+    }
+    
+    .sign-in-container{
+    
+    margin-top: 150px;
+    }
+    .signUp-container{
+       margin-top: 150px;
+    }
+    .signup-message{
+   margin-left: -420px;
+    }
+  }
+  @media (max-width: 1230px) {
+   
+    .sign-in-container{
+    
+        margin-left: -190px;
+    }
+    
+    .sign-in-container{
+    
+        margin-top: 150px;
+        }
+        .signUp-container{
+            margin-top: 150px;
+         }
+  }
+  @media (max-width: 1200px) {
+   
+    .sign-in-container{
+    
+        margin-left: -150px;
+    }
+    .sign-in-container{
+    
+        margin-top: 150px;
+        }
+        .signUp-container{
+            margin-top: 150px;
+         }
+  }
+  @media (max-width: 1130px) {
+   
+    .sign-in-container{
+    
+        margin-left: -200px;
+    }
+    .sign-in-container{
+    
+        margin-top: 150px;
+        }
+        .signUp-container{
+            margin-top: 150px;
+         }
+  }

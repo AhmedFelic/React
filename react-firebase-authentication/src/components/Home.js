@@ -2,6 +2,7 @@ import React from "react"
 import {useAuthState} from "react-firebase-hooks/auth"  // info o logovanom useru se nalazi u ovom
 import { auth } from "../firebase"
 import { useNavigate } from "react-router-dom";
+import Chat from "./Chat";
 function Home(){
     const navigate = useNavigate();
     const signOutClick = () =>{
@@ -13,6 +14,9 @@ function Home(){
         <div>
 
             <p>Welcome to Homepage {user?.email}</p>
+
+            <Chat/>
+
             <button onClick={()=> signOutClick()}>Sign Out</button>  {/*Funkcija ovdje ce sama rijesiti sign out koje se povlaci iz autha */}
         </div>
     )

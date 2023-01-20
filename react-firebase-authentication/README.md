@@ -1,4 +1,4 @@
-Made a working public chat app, which requires register and signup.
+Made a working group chat app, which requires register and signup (You can use dummy data to register).
 
 The app was made in React, and Firebase Firestore db.
 

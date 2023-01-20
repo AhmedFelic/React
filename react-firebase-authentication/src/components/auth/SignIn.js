@@ -37,7 +37,7 @@ const SignIn = () => {
     return (
         <>
        
-            <div className="align">
+            <div className="align home">
                 
                 <div className="sign-in-container">
                     <form onSubmit={signIn}>

@@ -31,6 +31,7 @@ function Chat() {
 
     return (
         <>
+        <div className='container-chat-input'>
             <div className='chat-container'>
                 {messages.map((messages, id, text, email) => (
                     <div className='chat-txt' key={id} >
@@ -38,14 +39,16 @@ function Chat() {
 
                     </div>
                 ))}
-                <div ref={dummy}></div>
+              <div ref={dummy}></div>
+            </div>
+           
                 <div className='input-msg-container'>
                     <form onSubmit={sendMessage}>
                         <input className='input-msg' placeholder='Your message...' value={msg} onChange={(e) => setMsg(e.target.value)} />
                         <button className='send-btn' type='submit'>Send</button>
                     </form>
                 </div>
-            </div>
+                </div>
         </>
     )
 }

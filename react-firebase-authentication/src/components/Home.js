@@ -13,7 +13,9 @@ function Home() {
     const [user, loading, error] = useAuthState(auth);
     return (
         <div>
+            
             <span className="title-chat">
+              
             <p>Welcome to group Chat {user?.email}</p>
             </span>
             <Chat />

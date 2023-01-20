@@ -1,5 +1,5 @@
 .chat-container {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
     
     padding:4px;
     margin: auto;
@@ -18,10 +18,21 @@
     background-color: rgb(216, 216, 216, 0.9);
     border: none;
     text-indent: 15px;
-
+    margin-left: 5px;
+}
+.container-chat-input{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 500px;
+    margin: auto;
+    padding-right: 8.5px;
+    
 }
 .input-msg-container{
+    margin: auto;
     
+
+    width: 500px;
+    padding: 10px 4px 10px 4px;
 }
 .send-btn{
     background-color: white;
@@ -71,3 +82,17 @@
     margin-bottom: 10px;
 
 }
+
+.txt-msg-login-container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+     font-size: 18px;
+    display: flex;
+    
+    justify-content: center;
+   
+     margin-left: -10px;
+    
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    }

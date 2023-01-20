@@ -38,7 +38,11 @@ const SignIn = () => {
         <>
        
             <div className="align home">
-                
+                <div className="txt-msg-login-container">
+                    <p className="txt-msg-login">
+                        This is a group chat message app, all of the messages sent will be saved to my firebase acc, and will stay displayed here, so feel free to send me a message :D
+                    </p>
+                </div>
                 <div className="sign-in-container">
                     <form onSubmit={signIn}>
                         <h1 className="title-login">LogIn</h1>

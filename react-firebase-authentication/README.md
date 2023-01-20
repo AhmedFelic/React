@@ -1,3 +1,3 @@
-Made a sign up and sign in, simple website authentication with react and firebase.
+Made a working public chat app, which requires register and signup.
 
-Will expand it and use it for an actual website.
+The app was made in React, and Firebase Firestore db.

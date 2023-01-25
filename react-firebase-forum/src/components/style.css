@@ -1,0 +1,45 @@
+.main-container{
+    
+    width: 100%;
+}
+.signin-container{
+    border: 1px solid black;
+    width: 340px;
+    height: 300px;
+    margin-top: 30px!important;
+    margin: auto;
+}
+
+.signup-container{
+
+    border: 1px solid black;
+    width: 340px;
+    margin-top: 10px!important;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 30px!important;
+}
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-bottom: 3px;
+  }
+  .fix{
+    padding-top: 40px;
+  }
+.title-input{
+    text-align: center;
+  }
+  .register-btn{
+    border: none;
+   background-color: white;
+   top: 110px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.register-btn:hover{
+background-color: rgba(211, 211, 214, 0.55);
+}
+

@@ -2,4 +2,4 @@ Book List using draftbit book data to show list of books, info and info about au
 
 Search works after 2 letters are inserted, and the same has pagination done over query API
 
-To run project: npm install, npm start
+To run project: npm install,npm install react-router-dom, npm start

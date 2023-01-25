@@ -4,6 +4,6 @@ All messages in here will be saved and displayed inside the chatApp.
 
 The app was made in React, and Firebase Firestore db.
 
-To install this, do nmp install, npm install firebase, npm install --save react-firebase-hooks.
+To install this, do nmp install, npm install firebase, npm install --save react-firebase-hooks, npm install react-router-dom.
 
 

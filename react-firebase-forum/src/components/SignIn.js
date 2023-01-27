@@ -53,22 +53,24 @@ function SignIn() {
             <h2 className='title-input'>Sign In</h2>
             <label className='input-mail-user-container'>Email</label> <input type="text" value={email} onChange={(e) => { setEmail(e.target.value) }} />
             <label className='input-password-container'>Password</label> <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <span className='btn-in-container'><button className="signin-button" type="submit">Sign In</button></span>  
             <button onClick={showRegister} className='register-btn'>Dont have an account? Register now!</button>
-            <button className="signup-button" type="submit">Sign In</button>
+          
           </div>
         </form>
-        <form onSubmit={signUp}>
+       
+      </div>
+      <form onSubmit={signUp}>
           {isShown ? <div id='Register' className='signup-container'>
             <div className='fix'></div>
             <h2 className='title-input'>Register</h2>
             <label className='input-mail-container'>Email</label> <input type="email" value={emailSingUp} onChange={(e) => setEmailSingUp(e.target.value)} />
             <label className='input-user-container'>Username</label> <input type="text" value={usernameSingUp} onChange={(e) => setUsernameSingUp(e.target.value)} />
             <label className='input-password-container'>Password</label> <input type="password" value={passwordSingUp} onChange={(e) => setPasswordSingUp(e.target.value)} />
-            <button className="signup-button" type="submit">Sign Up</button>
+            <span className='btn-up-container'> <button className="signup-button" type="submit">Sign Up</button></span>
 
           </div> : null}
         </form>
-      </div>
     </>
   )
 }

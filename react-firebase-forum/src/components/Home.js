@@ -18,7 +18,34 @@ function Home() {
     <>
       <Nav />
       <div className='home-container'>
-        <div>Home</div>
+
+        <h4 className='title-home'>Ask a question!</h4>
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th className='th-forums'>Forums</th>
+                <th className='th-topics'>Topics</th>
+                <th className='th-posts'>Posts</th>
+                <th>Activity</th>
+              </tr>
+            </thead>
+            <tr  className='tr-table'>
+              <td className='th-forums'>News</td>
+              <td>2</td>
+              <td>3</td>
+              <td>2 days ago</td>
+            </tr>
+            <tr  className='tr-table'>
+              <td className='th-forums'>Sports</td>
+              <td>5</td>
+              <td>7</td>
+              <td>1 days ago</td>
+            </tr>
+          </table>
+
+        </div>
+
         <button onClick={() => { signOut() }}>Sign Out</button>
       </div>
     </>

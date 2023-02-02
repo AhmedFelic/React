@@ -19,7 +19,7 @@ function Home() {
       <Nav />
       <div className='home-container'>
 
-        <h4 className='title-home'>Ask a question!</h4>
+        <h4 className='title-home'>Welcome to Q&A Forum!</h4>
         <div className="table-container">
           <table>
             <thead>
@@ -46,7 +46,7 @@ function Home() {
 
         </div>
 
-        <button onClick={() => { signOut() }}>Sign Out</button>
+        <button className='sing-out-btn' onClick={() => { signOut() }}>Sign Out</button>
       </div>
     </>
   )
